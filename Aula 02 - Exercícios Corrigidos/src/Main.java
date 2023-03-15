@@ -56,6 +56,7 @@ public class Main {
         System.out.println("Digite 2 - para realizar uma subtração");
         System.out.println("Digite 3 - para realizar uma multiplicação");
         System.out.println("Digite 4 - para realizar uma divisão");
+        System.out.println("Digite 5 - para realizar uma exponencial");
         var_aux= sc.nextInt();
 
 
@@ -72,8 +73,12 @@ public class Main {
             case 4:
                 System.out.println(num1/num2);
                 break;
+            case 5:
+                System.out.println(Math.pow(num1,num2));
+                break;
             default:
                 System.out.println("Esse numero não corresponde a nenhuma opção");
+                break; 
         }
 
         //EXERCICIO 3:
