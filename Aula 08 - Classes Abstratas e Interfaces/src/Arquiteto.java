@@ -1,4 +1,4 @@
-public class Arquiteto extends Funcionario{
+public class Arquiteto extends Funcionario implements GerenciaProjeto{
 
     private String especialidade;
 
@@ -17,4 +17,8 @@ public class Arquiteto extends Funcionario{
         System.out.println("O arquiteto " + getNome() + " esta trabalhando com sua especialidade: " + especialidade);
     }
 
+    @Override
+    public void gerenciar() {
+        System.out.println("O arquiteto esta trabalhando em um projeto");
+    }
 }

@@ -1,7 +1,7 @@
 public interface GerenciaProjeto {
 
    // metodo já é abstrato por padrão, portanto não possui corpo: 
-    public void gerenciar();
+    void gerenciar();
 
 
     /*

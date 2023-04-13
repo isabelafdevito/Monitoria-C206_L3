@@ -1,5 +1,4 @@
-public class  Funcionario {
-
+public abstract class Funcionario {
 
     private String nome;
     private int idade;
@@ -33,20 +32,18 @@ public class  Funcionario {
     }
 
 
-
+    //exemplo de atributo estático:
     private static int qntFuncionarios;
 
     public static int getQntFuncionarios() {
         return qntFuncionarios;
     }
 
-
-
-
-    //exemplo de atributo estático:
     public Funcionario() {
         qntFuncionarios++;
     }
+
+
 
     // criando o metodo mostra Info:
     public void mostraInfo() {
@@ -55,11 +52,7 @@ public class  Funcionario {
         System.out.println("Salario: " + salario);
     }
 
-    public void executaAcao(){
-        System.out.println("O funcionario esta trabalhando");
-    }
-
-
+    public abstract void executaAcao(); //metodo abstrato
 
     public double salarioBonus(){
         return salario;

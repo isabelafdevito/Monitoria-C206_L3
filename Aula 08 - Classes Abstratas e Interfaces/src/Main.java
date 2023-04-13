@@ -8,7 +8,7 @@ public class Main {
         mas utilizando do conceito de polimorfismo, e atribuindo esses arrays a cada tipo
         especifico de funcionario:
          */
-         //Funcionario func = new Funcionario();
+        //Funcionario func = new Funcionario();
 
         Funcionario[] func = new Funcionario[5];
 
@@ -57,6 +57,7 @@ public class Main {
                     ((Engenheiro) func[i]).setBonus(2000);
                     System.out.println("Salario depois do bonus: " + func[i].salarioBonus());
                     System.out.println();
+                    ((Engenheiro) func[i]).gerenciar();
                 }
                 else if (func[i] instanceof Professor){
                     System.out.println("Informacoes do professor: ");
@@ -72,6 +73,7 @@ public class Main {
                     func[i].executaAcao();
                     System.out.println("Salario: " + func[i].salarioBonus());
                     System.out.println();
+                    ((Arquiteto) func[i]).gerenciar();
                 }
             }
         }

@@ -1,4 +1,4 @@
-public class Engenheiro extends Funcionario{
+public class Engenheiro extends Funcionario implements GerenciaProjeto{
     //atributos apenas de engenheiro:
     private String ramo;
     private double bonus;
@@ -28,4 +28,8 @@ public class Engenheiro extends Funcionario{
         return (super.salarioBonus() + bonus);
     }
 
+    @Override
+    public void gerenciar() {
+        System.out.println("O engenheiro esta gerenciando um projeto");
+    }
 }
