@@ -16,5 +16,7 @@ public class Main {
         nb.setArmazenamento(4000);
         System.out.println(nb.etiquetaPreco());
 
+
+
     }
 }

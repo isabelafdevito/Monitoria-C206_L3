@@ -4,6 +4,8 @@ public class Notebook extends Produto{
     private String gpu;
     private String processador;
 
+
+
     public void setArmazenamento(double armazenamento) {
         this.armazenamento = armazenamento;
     }

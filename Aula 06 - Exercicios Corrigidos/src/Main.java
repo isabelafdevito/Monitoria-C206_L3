@@ -6,9 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         // main exercicio 1:
-        Calculadora c = new Calculadora();
-        c.circunferencia(3);
-        c.volume(3);
+        System.out.println(Calculadora.circunferencia(3));
+        System.out.println(Calculadora.volume(3));
 
         //main exercicio 2:
         Conta conta = new Conta();
