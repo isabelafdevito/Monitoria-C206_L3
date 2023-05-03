@@ -11,10 +11,10 @@ public class Main {
 
         Para isso, quando queremos criar uma lista que nao tenha tamanho pré definido
         e evitarmos os erros acima, usamos de listas em java, denominadas de Array List
-         */
+        */
 
         //Exemplos de Array List:
-        ArrayList lista = new ArrayList<>(); //Array list é uma classe do conjunto de classes collections
+        ArrayList lista = new ArrayList(); //Array list é uma classe do conjunto de classes collections
 
         //Conhecendo os métodos de listas:
 
@@ -92,7 +92,7 @@ public class Main {
 
         System.out.println(numeros);
 
-        /*
+        
         Cofrinho c = new Cofrinho();
 
         Moeda m1 = new Moeda(50);
@@ -111,6 +111,6 @@ public class Main {
         System.out.println("Moedas ordenadas: ");
         c.ordenaMoedas();
 
-*/
+
     }
 }
