@@ -1,3 +1,8 @@
+package view;
+
+import controller.Arquivo;
+import model.Funcionario;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,7 +35,7 @@ public class Main
                     System.out.println("Digite seu CPF: ");
                     f.cpf = sc.nextLine();
                     arq.escrever(f);
-                    System.out.println("Funcionario adicionado!");
+                    System.out.println("model.Funcionario adicionado!");
                     break;
 
                 case 2:

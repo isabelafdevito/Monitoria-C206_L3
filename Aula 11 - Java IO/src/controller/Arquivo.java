@@ -1,3 +1,7 @@
+package controller;
+
+import model.Funcionario;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -10,6 +14,7 @@ public class Arquivo {
         BufferedWriter bw = null;
         String linhaEscrever;
 
+        // bloco try catch para caso tenha algo de errado na escrita do funcionario no arquivo.txt
         try{
 
             os = new FileOutputStream("Funcionario.txt", true);
@@ -23,11 +28,10 @@ public class Arquivo {
             bw.write(func.cpf + "\n");
 
         }catch(Exception e){
-
             System.out.println(e);
 
         }finally {
-
+// bloco try catch para tentar fechar a entrada de dados
             try {
                 bw.close();
             }catch (Exception e){
@@ -47,6 +51,7 @@ public class Arquivo {
         BufferedReader br = null;
         String linhaLer;
 
+        // bloco try catch para tentar ler um arquivo
         try{
 
             is = new FileInputStream("Funcionario.txt");
@@ -68,6 +73,8 @@ public class Arquivo {
         }catch (Exception e){
             System.out.println(e);
         }finally {
+
+            // bloco try catch para tentar fechar a leitura de dados
             try{
                 br.close();
             }catch (Exception e){
