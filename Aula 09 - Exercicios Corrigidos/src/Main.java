@@ -13,7 +13,7 @@ public class Main {
         c.addProduto(p2);
         c.addProduto(p3);
 
-        for (Produto p : c.produtos){
+        for (Produto p : c.getProdutos()){
             System.out.println(p.getNome());
             System.out.println(p.getPreco());
         }
@@ -22,9 +22,9 @@ public class Main {
 
         // Exercicio I:
 
-        Collections.sort(c.produtos);
+        Collections.sort(c.getProdutos());
 
-        for (Produto p : c.produtos){
+        for (Produto p : c.getProdutos()){
             System.out.println(p.getNome());
             System.out.println(p.getPreco());
         }
@@ -33,9 +33,9 @@ public class Main {
 
         //Exercicio II:
 
-        Collections.sort(c.produtos);
+        Collections.sort(c.getProdutos());
 
-        for (Produto p : c.produtos){
+        for (Produto p : c.getProdutos()){
             System.out.println(p.getNome());
             System.out.println(p.getPreco());
         }
@@ -44,10 +44,10 @@ public class Main {
 
         // Exercicio III:
 
-        Collections.sort(c.produtos);
-        Collections.reverse(c.produtos);
+        Collections.sort(c.getProdutos());
+        Collections.reverse(c.getProdutos());
 
-        for (Produto p : c.produtos){
+        for (Produto p : c.getProdutos()){
             System.out.println(p.getNome());
             System.out.println(p.getPreco());
         }
