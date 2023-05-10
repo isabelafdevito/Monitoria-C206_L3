@@ -20,7 +20,8 @@ public class Main
             System.out.println("Digite sua opção: ");
             System.out.println("1 - Adicionar Funcionário");
             System.out.println("2 - Ler Arquivo");
-            System.out.println("3 - Sair");
+            System.out.println("3 - Para remover um funcionário");
+            System.out.println("4 - Sair");
             int op = sc.nextInt();
             sc.nextLine();
 
@@ -49,9 +50,21 @@ public class Main
                     break;
 
                 case 3:
+                    System.out.println("Digite o nome do funcionario que deseja remover");
+                    f.nome = sc.nextLine();
+                    System.out.println("Digite a idade do funcionario que deseja remover: ");
+                    f.idade = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Digite o CPF do funcionario que deseja remover: ");
+                    f.cpf = sc.nextLine();
+                    arq.remover(f);
+                    break;
+
+                case 4:
                     flag = false;
                     System.out.println("Você saiu!");
                     break;
+
 
                 default:
                     System.out.println("opção inválida!");

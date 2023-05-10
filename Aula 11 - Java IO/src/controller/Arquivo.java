@@ -4,6 +4,7 @@ import model.Funcionario;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Arquivo {
 
@@ -25,6 +26,7 @@ public class Arquivo {
             recebidos no final do arquivo, se for false, ele sobescreve o arquivo.
              */
 
+            //os = new FileOutputStream("C:/Users/User/OneDrive/Área de Trabalho/Arquivo.txt", true);
             os = new FileOutputStream("Funcionario.txt", true);
 
             /*
@@ -68,6 +70,7 @@ public class Arquivo {
 
     }
 
+
     public ArrayList<Funcionario> ler(){
 
         ArrayList<Funcionario> funcionarios = new ArrayList<>();
@@ -84,6 +87,8 @@ public class Arquivo {
             o FileInputStream é responsável por ler os bytes de um arquivo
             cujo nome foi passado como parametro
              */
+
+            // is = new FileInputStream("C:/Users/User/OneDrive/Área de Trabalho/Arquivo.txt");
             is = new FileInputStream("Funcionario.txt");
 
             /*
@@ -127,6 +132,55 @@ public class Arquivo {
 
 
         return funcionarios;
+    }
+
+
+    public void remover(Funcionario func) {
+        ArrayList<Funcionario> funcionarios = ler(); // Lê todos os funcionários do arquivo
+
+        /*
+        O Iterator é uma interface em Java que permite percorrer uma coleção
+         de elementos e realizar operações como remoção de elementos durante a iteração.
+         Ele fornece métodos para percorrer os elementos da coleção de forma sequencial.
+         */
+
+        // Percorre a lista de funcionários e remove o funcionário desejado
+        Iterator<Funcionario> iterator = funcionarios.iterator();
+        while (iterator.hasNext()) {
+            Funcionario f = iterator.next();
+            if (f.cpf.equals(func.cpf)) { // Verifica se o CPF corresponde ao funcionário a ser removido
+                iterator.remove(); // Remove o funcionário da lista
+                System.out.println("Funcionario removido!");
+                break; // Sai do loop após remover o funcionário
+            }
+        }
+
+        // Reescreve a lista atualizada no arquivo
+        OutputStream os = null;
+        OutputStreamWriter osw = null;
+        BufferedWriter bw = null;
+
+        try {
+            os = new FileOutputStream("Funcionario.txt", false); // Sobrescreve o arquivo
+            osw = new OutputStreamWriter(os);
+            bw = new BufferedWriter(osw);
+
+            for (Funcionario f : funcionarios) {
+                bw.write("Funcionario");
+                bw.newLine();
+                bw.write(f.nome + "\n");
+                bw.write(f.idade + "\n");
+                bw.write(f.cpf + "\n");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            try {
+                bw.close();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
     }
 
 }
