@@ -1,3 +1,5 @@
+package view;
+
 import view.InterfaceGrafica;
 
 import javax.swing.*;
